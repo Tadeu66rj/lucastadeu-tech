@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas Tadeu | Hardware & PC</title>
+  <meta name="description" content="Engenharia e hardware aplicados ao seu PC. Análises, otimização e dicas.">
+  <style>
+    :root {
+      --roxo: #b43cff;
+      --ciano: #00e5ff;
+      --fundo: #07070d;
+      --texto: #f2f2f7;
+      --texto-suave: #a7a7b8;
+      --cartao: #12121c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--fundo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+    a { color: var(--ciano); text-decoration: none; }
+    .container { width: min(1000px, 92%); margin: 0 auto; }
+
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(7, 7, 13, 0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #1f1f2e;
+    }
+    header .container {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 0;
+    }
+    .logo {
+      font-weight: 900; font-style: italic; font-size: 1.3rem;
+      background: linear-gradient(90deg, var(--roxo), var(--ciano));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    nav a { color: var(--texto-suave); margin-left: 18px; font-size: 0.95rem; }
+    nav a:hover { color: var(--ciano); }
+
+    .hero { padding: 90px 0 70px; text-align: center; }
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      font-weight: 900; font-style: italic; line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .hero h1 span {
+      background: linear-gradient(90deg, var(--roxo), var(--ciano));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero p { color: var(--texto-suave); max-width: 620px; margin: 0 auto 30px; }
+
+    .botao {
+      display: inline-block; padding: 14px 28px; border-radius: 10px;
+      font-weight: 700; color: #07070d;
+      background: linear-gradient(90deg, var(--roxo), var(--ciano));
+      box-shadow: 0 0 22px rgba(0, 229, 255, 0.35);
+    }
+    .botao:hover { filter: brightness(1.1); }
+
+    section { padding: 60px 0; }
+    section h2 {
+      font-size: 1.8rem; font-weight: 800; margin-bottom: 24px;
+      text-align: center;
+    }
+    section h2 span { color: var(--ciano); }
+
+    .grid {
+      display: grid; gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .card {
+      background: var(--cartao);
+      border: 1px solid #22223a;
+      border-radius: 14px;
+      padding: 26px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .card:hover { border-color: var(--roxo); transform: translateY(-3px); }
+    .card h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--ciano); }
+    .card p { color: var(--texto-suave); font-size: 0.95rem; }
+
+    .sobre { background: var(--cartao); border-top: 1px solid #22223a; border-bottom: 1px solid #22223a; }
+    .sobre p { color: var(--texto-suave); max-width: 720px; margin: 0 auto; text-align: center; }
+
+    .contato { text-align: center; }
+    .contato p { color: var(--texto-suave); margin-bottom: 24px; }
+
+    footer {
+      border-top: 1px solid #1f1f2e;
+      padding: 26px 0;
+      text-align: center;
+      color: var(--texto-suave);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav a { margin-left: 12px; font-size: 0.85rem; }
+      .hero { padding: 60px 0 50px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">LT</div>
+      <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Engenharia e hardware<br><span>aplicados ao seu PC</span></h1>
+        <p>Análises honestas, otimização de desempenho e dicas práticas para você tirar o máximo do seu computador.</p>
+        <a class="botao" href="#contato">Fale comigo</a>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <h2>O que <span>eu faço</span></h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Análises</h3>
+            <p>Avaliação de peças e componentes, com foco no que realmente importa para o seu uso.</p>
+          </div>
+          <div class="card">
+            <h3>Otimização</h3>
+            <p>Ajustes de sistema e configuração para deixar seu PC mais rápido, sem gastar nada.</p>
+          </div>
+          <div class="card">
+            <h3>Dicas</h3>
+            <p>Conteúdo direto ao ponto sobre montagem, manutenção e compra de hardware.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+      <div class="container">
+        <h2>Sobre <span>mim</span></h2>
+        <p>Sou o Lucas Tadeu, criador de conteúdo digital focado em hardware e PC. Explico tecnologia de forma simples, para quem quer entender o que está comprando e como cuidar do próprio computador.</p>
+      </div>
+    </section>
+
+    <section id="contato" class="contato">
+      <div class="container">
+        <h2>Vamos <span>conversar</span></h2>
+        <p>Para parcerias comerciais e orçamentos, chame no Instagram.</p>
+        <a class="botao" href="https://instagram.com/lucastadeu.tech" target="_blank" rel="noopener">@lucastadeu.tech</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Lucas Tadeu | Hardware & PC
+    </div>
+  </footer>
+
+</body>
+</html>
